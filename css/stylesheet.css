@@ -1,4 +1,4 @@
-html, body{
+html, body, .product-container > button{
   height: 100%;
   font-family: Bebas Neue;
   color: rgba(10, 54, 65, 1);
@@ -119,4 +119,22 @@ footer p, footer a{
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-size: 7vh;
+}
+.product-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px;
+  margin-top: 50px;
+}
+.product-container > img {
+  max-width: 35vw;
+}
+.product-container > button {
+  border: solid, rgba(10, 54, 65, 1);
+  border-radius: 5px;
+  height: 5vh;
+  width: 20vw;
+  background-color: white;
+  font-size: 2vh;
 }
