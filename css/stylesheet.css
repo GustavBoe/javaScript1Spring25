@@ -1,0 +1,122 @@
+html, body{
+  height: 100%;
+  font-family: Bebas Neue;
+  color: rgba(10, 54, 65, 1);
+}
+header{
+  background-color:rgba(10, 54, 65, 1) ;
+
+}
+.active{
+  border-bottom-style:solid;
+  border-color:white ;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.navbar{ 
+  display: flex;
+  justify-content: space-evenly;
+  text-align: justify; 
+}
+.navbar ul{
+  padding: 0%;
+}
+.navbar li{
+  display: inline-block;  
+}
+.navbar a{
+  margin: 3vw;
+  color: white;
+  text-decoration: none;
+  font-size: 100%;
+  
+}
+.nav-logo img{
+  width: 20vw;
+  height: auto;
+  background-color: rgba(10, 54, 65, 1);
+}
+footer{
+  background-color:rgba(10, 54, 65, 1) ;
+  height: 40%;
+  margin-top: 10%;
+  padding: 10%;
+  display: grid;
+  grid-gap: 5%;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows: 60% 70%;
+  align-items: center;
+  align-content: center;
+}
+
+footer p, footer a{
+  display: inline-block;
+  margin: 0%;
+  padding-top:1em;
+  margin-bottom: 1em;
+  text-decoration: none;
+  color: white;
+  font-size: 3vh;
+}
+/* Index*/
+.index-banner{
+  position: relative;
+  height: 40vh;
+  padding-top:1% ;
+}
+.index-banner-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+	object-position: center;
+	margin: 0;
+}
+.index-banner-text{
+  position: absolute;
+	inset: 0;
+	padding: 1rem;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.index-banner-text a{
+  text-decoration: none;
+  color: white;
+  font-size: 6vh;
+}
+.index-banner-text h1{
+  font-weight: 100;
+}
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10%;
+}
+.shop-men, .shop-women {
+  flex: 1;
+  width:50vw;
+  height:auto;
+  position: relative;
+  padding: 1%;
+}
+.shop-men-image, .shop-women-image{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+	object-position: center;
+	margin: 0;
+}
+.shop-men-text, .shop-women-text{	
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  }
+.shop-men-text a, .shop-women-text a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 7vh;
+}
