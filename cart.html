@@ -27,7 +27,7 @@
       src="https://kit.fontawesome.com/ad6ed871b9.js"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="/js/script.mjs" defer></script>
+    <script type="module" src="/js/cart.mjs" defer></script>
   </head>
   <body>
     <header>
@@ -52,43 +52,23 @@
       </nav>
     </header>
     <main>
-      <div class="index-banner">
-        <a href="./products.html"
-          ><img
-            src="./assets/images/fall24collection.jpg"
-            alt="Two people in weatherproof clothing looking out over a misty valley"
-            class="index-banner-img"
-        /></a>
-        <div class="index-banner-text">
-          <a href="./products.html"><h1>2024 Fall Collection</h1></a>
+      <h1 class="cart-heading">Your cart</h1>
+      <div id="display-cart-container">
+        <div class="cart-container">
+          <img
+            src="https://static.noroff.dev/api/rainy-days/9-thunderbolt-jacket.jpg"
+          />
+          <h3>Product title</h3>
+          <h3>product price</h3>
+        </div>
+        <div class="sum-container">
+          <h3>Your total:</h3>
+          <h3>sum</h3>
+        </div>
+        <div class="checkout-button-container">
+          <button>Checkout</button>
         </div>
       </div>
-      <div class="wrapper">
-        <div class="shop-men">
-          <a href="./products.html"
-            ><img
-              src="./assets/images/shopmen.jpg"
-              alt="A man in a red rainjacket looking over water towards amisty mountain"
-              class="shop-men-image"
-          /></a>
-          <div class="shop-men-text">
-            <a href="./products.html">Shop men</a>
-          </div>
-        </div>
-        <div class="shop-women">
-          <a href="./products.html"
-            ><img
-              src="./assets/images/shopwomen.jpg"
-              alt="A woman tying her shoe on a rocky trail"
-              class="shop-women-image"
-            />
-          </a>
-          <div class="shop-women-text">
-            <a href="./products.html">Shop women</a>
-          </div>
-        </div>
-      </div>
-      <div id="display-container"></div>
       <footer>
         <p class="footer-about"><a href="./about.html">About</a></p>
         <p class="footer-slogan">Pushing the comfort zone</p>

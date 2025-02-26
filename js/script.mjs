@@ -1,4 +1,4 @@
-import { allProducts } from "./products.mjs";
+import { allProducts, apiURL } from "./products.mjs";
 const displayContainer = document.getElementById("display-container");
 
 function generateProductHtml(product) {
@@ -15,31 +15,34 @@ function generateProductHtml(product) {
 
   const productPrice = document.createElement("h2");
   if (!allProducts[product].onSale) {
-    productPrice.textContent = "$" + allProducts[product].price;
+    productPrice.textContent = "$" + " " + allProducts[product].price;
   } else {
-    productPrice.textContent = "$" + allProducts[product].discountedPrice;
+    productPrice.textContent = "$" + " " + allProducts[product].discountedPrice;
   }
-  const productViewButton = document.createElement("button");
-  productViewButton.textContent = "View product";
+
+  const productLink = document.createElement("a");
+  productLink.href = `product.html?id=${allProducts[product].id}`;
+  productLink.classList.add("product-link-button");
+  productLink.innerHTML = "<button>View</button>";
 
   productContainer.append(
     productTitle,
     productImage,
     productPrice,
-    productViewButton
+    productLink
   );
 
   return productContainer;
 }
 
-function displayProducts(data) {
+async function displayProducts(data) {
   for (let i = 0; i < data.length; i++) {
-    const productHtml = generateProductHtml(i);
+    const productHtml = await generateProductHtml(i);
     displayContainer.append(productHtml);
   }
 }
 
-function main() {
-  displayProducts(allProducts);
+async function main() {
+  await displayProducts(allProducts);
 }
 main();
