@@ -86,7 +86,7 @@ function generateProductHtml(product) {
 async function displayProducts(data) {
   for (let i = 0; i < data.length; i++) {
     const productHtml = await generateProductHtml(i);
-    displayContainer.append(productHtml);
+    await displayContainer.append(productHtml);
   }
 }
 
