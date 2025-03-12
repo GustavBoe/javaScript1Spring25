@@ -1,131 +1,137 @@
-html, body, .product-container > button{
+html,
+body,
+.product-container > button {
   height: 100%;
   font-family: Bebas Neue;
   color: rgba(10, 54, 65, 1);
 }
-header{
-  background-color:rgba(10, 54, 65, 1) ;
-
+header {
+  background-color: rgba(10, 54, 65, 1);
 }
-.active{
-  border-bottom-style:solid;
-  border-color:white ;
+.active {
+  border-bottom-style: solid;
+  border-color: white;
   font-weight: bold;
   padding-bottom: 5px;
 }
-.navbar{ 
+.navbar {
   display: flex;
   justify-content: space-evenly;
-  text-align: justify; 
+  text-align: justify;
 }
-.navbar ul{
+.navbar ul {
   padding: 0%;
 }
-.navbar li{
-  display: inline-block;  
+.navbar li {
+  display: inline-block;
 }
-.navbar a{
+.navbar a {
   margin: 3vw;
   text-decoration: none;
   font-size: 100%;
-  
 }
-.navbar a, .navbar p{
+.navbar a,
+.navbar p {
   color: white;
 }
-.navbar p{
+.navbar p {
   margin-left: 0%;
 }
-.nav-logo img{
+.nav-logo img {
   width: 20vw;
   height: auto;
   background-color: rgba(10, 54, 65, 1);
 }
-footer{
-  background-color:rgba(10, 54, 65, 1) ;
+footer {
+  background-color: rgba(10, 54, 65, 1);
   height: 40%;
   margin-top: 10%;
   padding: 10%;
   display: grid;
   grid-gap: 5%;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 60% 70%;
   align-items: center;
   align-content: center;
 }
 
-footer p, footer a{
+footer p,
+footer a {
   display: inline-block;
   margin: 0%;
-  padding-top:1em;
+  padding-top: 1em;
   margin-bottom: 1em;
   text-decoration: none;
   color: white;
   font-size: 3vh;
 }
 /* Index*/
-.index-banner{
+.index-banner {
   position: relative;
   height: 40vh;
-  padding-top:1% ;
+  padding-top: 1%;
 }
-.index-banner-img{
+.index-banner-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-	object-position: center;
-	margin: 0;
+  object-position: center;
+  margin: 0;
 }
-.index-banner-text{
+.index-banner-text {
   position: absolute;
-	inset: 0;
-	padding: 1rem;
+  inset: 0;
+  padding: 1rem;
   display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-.index-banner-text a{
+.index-banner-text a {
   text-decoration: none;
   color: white;
   font-size: 6vh;
 }
-.index-banner-text h1{
+.index-banner-text h1 {
   font-weight: 100;
 }
-.wrapper{
+.wrapper {
   display: flex;
   flex-direction: row;
   margin-bottom: 10%;
 }
-.shop-men, .shop-women {
+.shop-men,
+.shop-women {
   flex: 1;
-  width:50vw;
-  height:auto;
+  width: 50vw;
+  height: auto;
   position: relative;
   padding: 1%;
 }
-.shop-men-image, .shop-women-image{
+.shop-men-image,
+.shop-women-image {
   width: 100%;
   height: auto;
   object-fit: cover;
-	object-position: center;
-	margin: 0;
+  object-position: center;
+  margin: 0;
 }
-.shop-men-text, .shop-women-text{	
+.shop-men-text,
+.shop-women-text {
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  }
-.shop-men-text a, .shop-women-text a{
+}
+.shop-men-text a,
+.shop-women-text a {
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-size: 7vh;
 }
-.product-container{
+.product-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,46 +141,64 @@ footer p, footer a{
 .product-container > img {
   max-width: 35vw;
 }
-.product-link-button > button, .button-container > button {
+.product-link-button > button,
+.button-container > button {
   border: solid, rgba(10, 54, 65, 1);
   border-radius: 5px;
   height: 5vh;
   background-color: white;
   font-size: 2vh;
 }
-.product-link-button > button, .button-container {
+.product-link-button > button,
+.button-container {
   width: 25vw;
 }
-.button-container > button{
+.button-container > button {
   width: 10vw;
+  margin-top: 5%;
 }
-.button-container{
+.button-container > button:hover,
+.product-link-button > button:hover {
+  background-color: rgba(10, 54, 65, 1);
+  color: white;
+}
+.button-container > button:active,
+.product-link-button > button:active {
+  background-color: green;
+  color: white;
+  border: none;
+}
+
+.button-container {
   display: flex;
   flex-direction: row;
-  justify-content:space-between ;
+  justify-content: space-between;
 }
-.chosen-product-container{
+.chosen-product-container {
   margin-top: 5%;
   margin-bottom: 30%;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   text-align: center;
 }
-.chosen-product-container > img{
+.chosen-product-container > img {
   margin-top: 2%;
   width: 30%;
   height: auto;
 }
 
-.chosen-Product-Heading{
+.chosen-Product-Heading {
   font-size: 30vh;
 }
-.specific-description{
+.specific-description {
   font-family: Brygada1918;
   padding: 5%;
 }
-.chosen-product-button, .cart-buy-button, .cart-continue-button, .chosen-product-container > button{
+.chosen-product-button,
+.cart-buy-button,
+.cart-continue-button,
+.chosen-product-container > button {
   font-family: Bebas Neue;
   font-size: 24px;
   color: white;
@@ -185,27 +209,27 @@ footer p, footer a{
   margin-top: 3em;
   margin-bottom: 3em;
 }
-.specific-cart-button:hover{
-  background-color:white;
+.specific-cart-button:hover {
+  background-color: white;
   color: rgba(10, 54, 65, 1);
   border-color: rgba(10, 54, 65, 1);
   border-style: solid;
   border-width: 5px;
   cursor: pointer;
 }
-.cart-heading{
+.cart-heading {
   text-align: center;
 }
-.cart-container, .sum-container > h3{
-  display:flex;
+.cart-container,
+.sum-container > h3 {
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.cart-container > img{
+.cart-container > img {
   width: 10%;
 }
-.cart-container >h3{
-  margin:2%;
+.cart-container > h3 {
+  margin: 2%;
 }
-
