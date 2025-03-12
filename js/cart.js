@@ -31,8 +31,6 @@ function generateProductHtml(product) {
 
   async function addButtonClick() {
     try {
-      await cartList.push(cartList[product]);
-      console.log(cartList);
       localStorage.setItem("cartList", JSON.stringify(cartList));
     } catch (error) {
       console.log("Something went wrong", error);
