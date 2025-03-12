@@ -9,7 +9,6 @@ async function getProducts(url) {
   } catch (error) {
     console.log("Something went wrong");
   } finally {
-    console.log(allProducts);
   }
 }
 async function addButtonClick() {
