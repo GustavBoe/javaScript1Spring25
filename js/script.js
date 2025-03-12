@@ -1,5 +1,4 @@
-export const apiURL = "https://v2.api.noroff.dev/rainy-days";
-export let cartList = [];
+const apiURL = "https://v2.api.noroff.dev/rainy-days";
 
 let allProducts = [];
 try {

@@ -1,4 +1,4 @@
-import { apiURL, cartList } from "./script.js";
+const apiURL = "https://v2.api.noroff.dev/rainy-days";
 let chosenProduct = [];
 const parameterString = window.location.search;
 const searchParameters = new URLSearchParams(parameterString);
