@@ -1,13 +1,16 @@
 const apiURL = "https://v2.api.noroff.dev/rainy-days";
 
 let allProducts = [];
-try {
-  const response = await fetch(apiURL);
-  const json = await response.json();
-  allProducts = await json.data;
-} catch (error) {
-  console.log("Something went wrong");
-} finally {
+async function getProducts(url) {
+  try {
+    const response = await fetch(url);
+    const json = await response.json();
+    allProducts = await json.data;
+  } catch (error) {
+    console.log("Something went wrong");
+  } finally {
+    console.log(allProducts);
+  }
 }
 async function addButtonClick() {
   try {
@@ -88,6 +91,7 @@ async function displayProducts(data) {
 }
 
 async function main() {
+  await getProducts(apiURL);
   await displayProducts(allProducts);
 }
 main();
