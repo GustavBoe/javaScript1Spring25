@@ -1,6 +1,5 @@
-import { apiURL } from "./products.mjs";
+import { apiURL, cartList } from "./script.js";
 let chosenProduct = [];
-export let cartList = [];
 const parameterString = window.location.search;
 const searchParameters = new URLSearchParams(parameterString);
 

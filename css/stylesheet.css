@@ -135,21 +135,31 @@ footer p, footer a{
 .product-container > img {
   max-width: 35vw;
 }
-.product-link-button > button {
+.product-link-button > button, .button-container > button {
   border: solid, rgba(10, 54, 65, 1);
   border-radius: 5px;
   height: 5vh;
-  width: 20vw;
   background-color: white;
   font-size: 2vh;
 }
-
+.product-link-button > button, .button-container {
+  width: 25vw;
+}
+.button-container > button{
+  width: 10vw;
+}
+.button-container{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between ;
+}
 .chosen-product-container{
   margin-top: 5%;
   margin-bottom: 30%;
   display: flex;
   flex-direction: column;
   align-items: center; 
+  text-align: center;
 }
 .chosen-product-container > img{
   margin-top: 2%;
@@ -186,7 +196,7 @@ footer p, footer a{
 .cart-heading{
   text-align: center;
 }
-.cart-container, .sum-container{
+.cart-container, .sum-container > h3{
   display:flex;
   flex-direction: row;
   justify-content: center;

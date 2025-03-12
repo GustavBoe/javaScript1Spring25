@@ -1,4 +1,23 @@
-import { allProducts, apiURL } from "./products.mjs";
+export const apiURL = "https://v2.api.noroff.dev/rainy-days";
+export let cartList = [];
+
+let allProducts = [];
+try {
+  const response = await fetch(apiURL);
+  const json = await response.json();
+  allProducts = await json.data;
+} catch (error) {
+  console.log("Something went wrong");
+} finally {
+}
+export async function addButtonClick() {
+  try {
+    await cartList.push(allProducts[product]);
+    console.log(cartList);
+  } catch (error) {
+    console.log("Something went wrong", error);
+  }
+}
 const displayContainer = document.getElementById("display-container");
 
 function generateProductHtml(product) {
@@ -25,11 +44,38 @@ function generateProductHtml(product) {
   productLink.classList.add("product-link-button");
   productLink.innerHTML = "<button>View</button>";
 
+  async function addButtonClick() {
+    try {
+      await cartList.push(allProducts[product]);
+      console.log(cartList);
+      localStorage.setItem("cartList", JSON.stringify(cartList));
+    } catch (error) {
+      console.log("Something went wrong", error);
+    }
+  }
+
+  function removeButtonClick() {
+    cartList.pop(allProducts[product]);
+    console.log(cartList);
+  }
+  const buttonContainer = document.createElement("div");
+  buttonContainer.classList.add("button-container");
+
+  const removeButton = document.createElement("button");
+  removeButton.textContent = "-";
+  removeButton.addEventListener("click", removeButtonClick);
+
+  const addButton = document.createElement("button");
+  addButton.textContent = "+";
+  addButton.addEventListener("click", addButtonClick);
+
+  buttonContainer.append(removeButton, addButton);
   productContainer.append(
     productTitle,
     productImage,
     productPrice,
-    productLink
+    productLink,
+    buttonContainer
   );
 
   return productContainer;
