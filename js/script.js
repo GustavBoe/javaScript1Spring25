@@ -9,7 +9,7 @@ try {
   console.log("Something went wrong");
 } finally {
 }
-export async function addButtonClick() {
+async function addButtonClick() {
   try {
     await cartList.push(allProducts[product]);
     console.log(cartList);
